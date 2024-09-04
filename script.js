@@ -184,30 +184,57 @@
 
 // ayaya
 
-start = 0 , end = 5
+// start = 0 , end = 5
 
-let result = true;
+// let result = true;
 
-function Palindrome(data){
-    let start = 0,end = data.length - 1;
-    while(end > start)
-    {
-        if(data[start] !== data[end])
-    {
-        result = false;
+// function Palindrome(data){
+//     let start = 0,end = data.length - 1;
+//     while(end > start)
+//     {
+//         if(data[start] !== data[end])
+//     {
+//         result = false;
+//     }
+//     start++;
+//     end--;
+//     }
+//     return result;
+// }
+// let str = 'aayaaaabaaaayaa';
+// Palindrome(str)
+
+// if(result)
+// {
+//     alert('It is palindrome')
+// }
+// else{
+//             alert('It is not palidrome');
+//         }
+
+
+class List {
+  constructor(data){
+    this.head = {
+      value : data,
+      next : null,
     }
-    start++;
-    end--;
+    this.tail = this.head;
+  }
+  appendNode(currNode){
+    let newNode = {
+      value : currNode,
+      next : null,
     }
-    return result;
+    this.tail.next = newNode;
+    this.tail = newNode;
+  }
 }
-let str = 'aayaaaabaaaayaa';
-Palindrome(str)
 
-if(result)
-{
-    alert('It is palindrome')
-}
-else{
-            alert('It is not palidrome');
-        }
+let list = new List('100');
+list.appendNode('200')
+list.appendNode('300')
+list.appendNode('400')
+list.appendNode('500')
+list.appendNode('600')
+console.log(list)

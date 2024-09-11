@@ -213,28 +213,44 @@
 //         }
 
 
-class List {
-  constructor(data){
-    this.head = {
-      value : data,
-      next : null,
-    }
-    this.tail = this.head;
+// class List {
+//   constructor(data){
+//     this.head = {
+//       value : data,
+//       next : null,
+//     }
+//     this.tail = this.head;
+//   }
+//   appendNode(currNode){
+//     let newNode = {
+//       value : currNode,
+//       next : null,
+//     }
+//     this.tail.next = newNode;
+//     this.tail = newNode;
+//   }
+// }
+
+// let list = new List('100');
+// list.appendNode('200')
+// list.appendNode('300')
+// list.appendNode('400')
+// list.appendNode('500')
+// list.appendNode('600')
+// console.log(list)
+
+
+let array = [10,20,30,40,50];
+let position = 3;
+function deleteFromArray(data,pos){
+  for(let i =pos;i<data.length;i++){
+    
+      data[i] = data[i+1];
+    
   }
-  appendNode(currNode){
-    let newNode = {
-      value : currNode,
-      next : null,
-    }
-    this.tail.next = newNode;
-    this.tail = newNode;
-  }
+  data.length = data.length - 1;
 }
 
-let list = new List('100');
-list.appendNode('200')
-list.appendNode('300')
-list.appendNode('400')
-list.appendNode('500')
-list.appendNode('600')
-console.log(list)
+deleteFromArray(array,position)
+
+console.log(array)

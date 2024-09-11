@@ -240,17 +240,48 @@
 // console.log(list)
 
 
-let array = [10,20,30,40,50];
-let position = 3;
-function deleteFromArray(data,pos){
-  for(let i =pos;i<data.length;i++){
+// let array = [10,20,30,40,50];
+// let position = 3;
+// function deleteFromArray(data,pos){
+//   for(let i =pos;i<data.length;i++){
     
-      data[i] = data[i+1];
+//       data[i] = data[i+1];
     
-  }
-  data.length = data.length - 1;
+//   }
+//   data.length = data.length - 1;
+// }
+
+// deleteFromArray(array,position)
+
+// console.log(array)
+
+
+// let data = [1,2,3,5,6,7];
+// let item = 73;
+// let pos = 999;
+// for(let i = 0;i<data.length;i++){
+//   if(item == data[i]){
+//     pos = i;
+//     break;
+//   }
+// }
+// if(pos == 999){
+//   alert('not found')
+// }
+// else{
+//   alert(pos)
+// }
+
+
+let d1 = [1,3,5,7,9];
+let d2 = [2,4,6,8,10];
+let d3 = [];
+
+for(let i = 0;i<d1.length;i++){
+    d3[i] = d1[i];
+}
+for(let i = 0;i<d2.length;i++){
+    d3[d1.length + i] = d2[i];
 }
 
-deleteFromArray(array,position)
-
-console.log(array)
+console.log(d3)

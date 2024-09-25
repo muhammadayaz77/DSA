@@ -286,18 +286,53 @@
 
 // console.log(d3);
 
-let array = [1,3,5,6,7,33,36,37,34,94,39,30];
-iteration = 12;
-let arrLen = array.length;
-let key = 30;
-let isFind = false;
-function LINEAR_SEARCH(A,n,key){
-    for(let i = 0;i<n;i++){
-        if(key == A[i]){
-            isFind = true;
-            console.log(i+1)
+// let array = [1,3,5,6,7,33,36,37,34,94,39,30];
+// iteration = 12;
+// let arrLen = array.length;
+// let key = 30;
+// let isFind = false;
+// function LINEAR_SEARCH(A,n,key){
+//     for(let i = 0;i<n;i++){
+//         if(key == A[i]){
+//             isFind = true;
+//             console.log(i+1)
+//         }
+//     }
+// }
+// LINEAR_SEARCH(array,arrLen,key)
+// console.log(isFind)
+
+
+let array = [1,2,3,4,5,6,7,8,9,10,11,12];
+let low = 0;
+let high = array.length;
+let key = 12;
+let find = -1;
+function binary_search(A,low,high,key){
+    while(low<=high)
+    {
+        let mid = Math.floor((low + high) / 2);
+        console.log('i')
+        if(key == A[mid])
+        {
+            find = mid;
+            break;
+        }
+        else if(key < A[mid])
+        {
+            high = mid - 1;
+        }
+        else{
+            low = mid + 1;
         }
     }
 }
-LINEAR_SEARCH(array,arrLen,key)
-console.log(isFind)
+
+binary_search(array,low,high,key);
+if(find == -1)
+{
+    console.log('value not found');
+}
+else{
+    console.log(`Value : ${find}`);
+}

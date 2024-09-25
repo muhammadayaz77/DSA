@@ -273,15 +273,31 @@
 // }
 
 
-let d1 = [1,3,5,7,9];
-let d2 = [2,4,6,8,10];
-let d3 = [];
+// let d1 = [1,3,5,7,9];
+// let d2 = [2,4,6,8,10];
+// let d3 = [];
 
-for(let i = 0;i<d1.length;i++){
-    d3[i] = d1[i];
-}
-for(let i = 0;i<d2.length;i++){
-    d3[d1.length + i] = d2[i];
-}
+// for(let i = 0;i<d1.length;i++){
+//     d3[i] = d1[i];
+// }
+// for(let i = 0;i<d2.length;i++){
+//     d3[d1.length + i] = d2[i];
+// }
 
-console.log(d3)
+// console.log(d3);
+
+let array = [1,3,5,6,7,33,36,37,34,94,39,30];
+iteration = 12;
+let arrLen = array.length;
+let key = 30;
+let isFind = false;
+function LINEAR_SEARCH(A,n,key){
+    for(let i = 0;i<n;i++){
+        if(key == A[i]){
+            isFind = true;
+            console.log(i+1)
+        }
+    }
+}
+LINEAR_SEARCH(array,arrLen,key)
+console.log(isFind)

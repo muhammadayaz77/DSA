@@ -303,36 +303,91 @@
 // console.log(isFind)
 
 
-let array = [1,2,3,4,5,6,7,8,9,10,11,12];
-let low = 0;
-let high = array.length;
-let key = 12;
-let find = -1;
-function binary_search(A,low,high,key){
-    while(low<=high)
-    {
-        let mid = Math.floor((low + high) / 2);
-        console.log('i')
-        if(key == A[mid])
-        {
-            find = mid;
-            break;
+// let array = [1,2,3,4,5,6,7,8,9,10,11,12];
+// let low = 0;
+// let high = array.length;
+// let key = 12;
+// let find = -1;
+// function binary_search(A,low,high,key){
+//     while(low<=high)
+//     {
+//         let mid = Math.floor((low + high) / 2);
+//         console.log('i')
+//         if(key == A[mid])
+//         {
+//             find = mid;
+//             break;
+//         }
+//         else if(key < A[mid])
+//         {
+//             high = mid - 1;
+//         }
+//         else{
+//             low = mid + 1;
+//         }
+//     }
+// }
+
+// binary_search(array,low,high,key);
+// if(find == -1)
+// {
+//     console.log('value not found');
+// }
+// else{
+//     console.log(`Value : ${find}`);
+// }
+
+// console.log('hi')
+
+class List{
+    constructor(data){
+        this.head = {
+            num : data,
+            next : null,
         }
-        else if(key < A[mid])
-        {
-            high = mid - 1;
+        this.tail = this.head;
+        this.size = 1;
+
+    }
+    appendNode(newData){
+        let newObj = {
+            num : newData,
+            next : null
         }
-        else{
-            low = mid + 1;
+        this.tail.next = newObj;
+        this.tail = newObj;
+        this.size += 1;
+    }
+    traversing(){
+        let counter = 0;
+        let currNode = this.head;
+        while(counter < this.size){
+            // console.log(currNode.num);
+            currNode = currNode.next;
+            counter++;
+        }
+    }
+    deleteNode(index){
+        let counter = 1;
+        let lead = this.head;
+        if(index == 1){
+            this.head = this.head.next;
+        }else{
+            while(counter <= index - 1){
+                lead = lead.next;
+                counter++;
+            }
+            let nextNode = lead.next.next;
+            lead.next = nextNode;
+            console.log(lead);
         }
     }
 }
 
-binary_search(array,low,high,key);
-if(find == -1)
-{
-    console.log('value not found');
-}
-else{
-    console.log(`Value : ${find}`);
-}
+let list = new List('100')
+list.appendNode('200')
+list.appendNode('300')
+list.appendNode('400')
+list.traversing()
+list.deleteNode(3)
+console.log(list)

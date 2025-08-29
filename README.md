@@ -1,6 +1,6 @@
 # 🚀 Data Structures & Algorithms (DSA) Roadmap
 
-![DSA Banner]("DSA\Image\DSA.png")
+![DSA Banner]("D:\SMIT\DSA and Algo\DSA\Image\DSA.png")
 
 ---
 

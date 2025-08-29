@@ -40,7 +40,10 @@ Clone this repository to explore the roadmap and practice resources:
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/dsa-roadmap.git
+git clone https://github.com/muhammadayaz77/DSA.git
+
+```
+```bash
 
 # Navigate into the folder
 cd dsa-roadmap

@@ -46,7 +46,7 @@ git clone https://github.com/muhammadayaz77/DSA.git
 ```bash
 
 # Navigate into the folder
-cd dsa-roadmap
+cd DSA
 ```
 
 ---

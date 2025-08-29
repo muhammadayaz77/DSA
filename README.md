@@ -1,4 +1,4 @@
-# 🚀 Data Structures & Algorithms (DSA) Roadmap
+# 🚀 In this Repo i'll learn Data Structures & Algorithms (DSA) with Javascript and Typescript
 
 ![DSA Banner](./Image/DSA.png)
 
@@ -115,4 +115,4 @@ If this roadmap helps you, please **star this repo** ⭐ to support and help oth
 📩 For queries and discussions:
 
 * GitHub Issues
-* Email: [your-email@example.com](mailto:your-email@example.com)
+* Email: [your-email@example.com](m.ayaz.developer@gmail.com)

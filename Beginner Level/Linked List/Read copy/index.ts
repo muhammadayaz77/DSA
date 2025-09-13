@@ -28,7 +28,13 @@ class List {
     this.tail = newNode;
     this.size +=1
   }
-  
+  traverse(){
+    let current : NodeType | null = this.head
+    while(current != null){
+      console.log(current.value);
+      current = current.next;
+    }
+  }
 }
 
 const list = new List(10);
@@ -36,5 +42,6 @@ list.appendNode(20);
 list.appendNode(20);
 list.appendNode(20);
 list.appendNode(20);
+list.traverse()
 
-console.log(JSON.stringify(list,null,2))
+// console.log(JSON.stringify(list,null,2))

@@ -1,35 +1,35 @@
 type NodeType = {
-  value : number,
-  next : null | {}
-}
+  value: number;
+  next: NodeType | null;
+};
 
 class List {
-  constructor(data){
-    this.head : NodeType = {
-      value : data,
-      next : null,
-    }
+  head: NodeType;
+  tail: NodeType;
+  size: number;
+
+  constructor(data: number) {
+    this.head = {
+      value: data,
+      next: null,
+    };
     this.tail = this.head;
     this.size = 1;
   }
-  appendNode(nodeData){
-    let newNode = {
-      value : nodeData,
-      next : null,
-    }
+
+  appendNode(nodeData: number): void {
+    const newNode: NodeType = {
+      value: nodeData,
+      next: null,
+    };
     this.tail.next = newNode;
     this.tail = newNode;
     this.size += 1;
   }
 }
-// let tail = {
-//   value : 100,
-//   next : {
-//     value:200
-//     next : null
-//   }
-// }
-let list = new List('100');
-list.appendNode('200')
-list.appendNode('300')
-console.log(list)
+
+let list = new List(100);
+list.appendNode(200);
+list.appendNode(300);
+
+console.log(JSON.stringify(list, null, 2));

@@ -1,35 +1,47 @@
+
+
 type NodeType = {
-  value: number;
-  next: NodeType | null;
-};
+  value : number,
+  next : null | NodeType
+}
+
 
 class List {
-  head: NodeType;
-  tail: NodeType;
-  size: number;
-
-  constructor(data: number) {
+  head : NodeType
+  tail : NodeType
+  size : number
+  
+  constructor(data : number) {
     this.head = {
-      value: data,
-      next: null,
-    };
+        value : data,
+        next : null
+    }
     this.tail = this.head;
-    this.size = 1;
+    this.size = 1
   }
-
-  appendNode(nodeData: number): void {
-    const newNode: NodeType = {
-      value: nodeData,
-      next: null,
-    };
+  appendNode(newData : number){
+    const newNode : NodeType = {
+        value : newData,
+        next : null
+    }
     this.tail.next = newNode;
     this.tail = newNode;
-    this.size += 1;
+    this.size +=1
+  }
+  // 🔹 Traverse & read all nodes
+  traverse(): void {
+    let current: NodeType | null = this.head;
+    while (current !== null) {
+      console.log(current.value); // read node value
+      current = current.next;
+    }
   }
 }
 
-let list = new List(100);
-list.appendNode(200);
-list.appendNode(300);
+const list = new List(10);
+list.appendNode(20);
+list.appendNode(20);
+list.appendNode(20);
+list.appendNode(20);
 
-console.log(JSON.stringify(list, null, 2));
+console.log(JSON.stringify(list,null,2))
